@@ -6,6 +6,7 @@ bars = 35
 p=pyaudio.PyAudio()
 stream=p.open(format=pyaudio.paInt16,channels=2,rate=44100,
               input=True, input_device_index=3, frames_per_buffer=1024)
+          #input_device_index may need to be changed
 while True:
     data = np.fromstring(stream.read(1024),dtype=np.int16)
     dataL = data[0::2]
