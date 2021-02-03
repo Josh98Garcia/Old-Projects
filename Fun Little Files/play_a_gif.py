@@ -5,7 +5,7 @@ import os
 root = tk.Tk()
 root.overrideredirect(True)
 
-frameCnt = 169
+frameCnt = 169   #startup.gif is the name of gif, frameCnt is the number of frames in the gif
 frames = [tk.PhotoImage(file='startup.gif',format = 'gif -index %i' %(i)) for i in range(frameCnt)]
 
 def update(ind):
